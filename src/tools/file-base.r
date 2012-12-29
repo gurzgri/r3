@@ -127,6 +127,7 @@ os: [
 
 os-win32: [
 	host-lib.c
+	host-odbc.c
 	dev-stdio.c
 	dev-file.c
 	dev-event.c

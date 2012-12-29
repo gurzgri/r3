@@ -23,7 +23,7 @@ systems: [
 	[0.1.03 "amiga"      posix  [HID NPS +SC CMT COP -SP -LM]]
 	[0.2.04 "osx"        posix  [+OS NCM -LM]]			; no shared lib possible
 	[0.2.05 "osxi"       posix  [ARC +O1 NPS PIC NCM HID STX -LM]]
-	[0.3.01 "win32"      win32  [+O2 UNI W32 WIN S4M EXE DIR -LM]]
+	[0.3.01 "win32"      win32  [+O2 UNI W32 WIN S4M EXE -LM]]
 	[0.4.02 "linux"      posix  [+O2 LDL ST1 -LM]]		; libc 2.3
 	[0.4.03 "linux"      posix  [+O2 HID LDL ST1 -LM]]	; libc 2.5
 	[0.4.04 "linux"      posix  [+O2 HID LDL ST1 M32 -LM]]	; libc 2.11
@@ -59,7 +59,7 @@ linker-flags: [
 	LDL: "-ldl"     ; link with dynamic lib lib
 	ARC: "-arch i386" ; x86 32 bit architecture (OSX)
 	M32: "-m32"       ; use 32-bit memory model (Linux x64)
-	W32: "-lwsock32 -lcomdlg32"
+	W32: "-lwsock32 -lcomdlg32 -luser32 -lodbc32"
 	WIN: "-mwindows"; build as Windows GUI binary
 	S4M: "-Wl,--stack=4194300"
 	-LM: "-lm" ; HaikuOS has math in libroot, for instance

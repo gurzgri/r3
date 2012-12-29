@@ -173,4 +173,8 @@ emit-file %host-ext-text [
 	%../boot/text.r
 ]
 
+emit-file %host-ext-odbc [
+	%../boot/odbc.r
+]
+
 print "   "
